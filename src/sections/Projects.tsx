@@ -1,48 +1,111 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import CheckIcon from "@/assets/icons/check-circle.svg";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import crowdCube from "@/assets/images/crowd_cube.png";
+import newsSphere from "@/assets/images/news_sphere.png";
+import traceBack from "@/assets/images/traceback.png";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
 
 const portfolioProjects = [
     {
-        company: "Acme Corp",
-        year: "2022",
-        title: "Dark Saas Landing Page",
-        results: [
-            { title: "Enhanced user experience by 40%" },
-            { title: "Improved site speed by 50%" },
-            { title: "Increased mobile traffic by 35%" },
+        id: 1,
+        image: newsSphere,
+        title: "NewsSphere - News Aggregation Platform",
+        description:
+            "NewsSphere is a dynamic platform that aggregates trending news and in-depth articles across various categories. The platform offers both free and premium experiences, complete with real-time data updates, secure subscription management, and a responsive design for an optimal user experience on any device.",
+        liveURL: "https://news-sphere-1eb5e.web.app/",
+        features: [
+            {
+                title: "Tailored user experience with Normal and Premium user roles",
+            },
+            {
+                title: "Diverse news categories including Technology, Business, Health, Science, Sports, and Politics",
+            },
+            {
+                title: "Robust article management for admins to create, update, and delete content",
+            },
         ],
-        link: "https://youtu.be/4k7IdSLxh6w",
-        image: darkSaasLandingPage,
+        technologies: [
+            "React.js",
+            "React Router",
+            "TailwindCSS",
+            "TanStack Query",
+            "Stripe",
+            "Firebase",
+            "JWT",
+            "Node.js",
+            "Express.js",
+            "MongoDB Atlas",
+            "ImgBB API",
+            "SweetAlert2",
+            "GSAP",
+        ],
+        githubFrontend: "https://github.com/sajjadislam523/news-sphere_client",
+        githubBackend: "https://github.com/sajjadislam523/news-sphere_server",
+    },
+
+    {
+        id: 2,
+        image: traceBack,
+        title: "TraceBack - Lost and Found Website",
+        description:
+            "A web application designed to connect people who have lost items with those who have found them. It enables users to post details about lost and found items, fostering a community-driven approach to recovering lost possessions.",
+        liveURL: "https://traceback-d327e.web.app/",
+        features: [
+            {
+                title: "Secure login and registration with Firebase Authentication",
+            },
+            { title: "Post Lost & Found Items with detailed information" },
+            { title: "Real-time updates for marking items as 'Recovered'" },
+        ],
+        technologies: [
+            "React",
+            "React Router",
+            "Firebase",
+            "Tailwind CSS",
+            "DaisyUI",
+            "Framer Motion",
+            "React Datepicker",
+            "Sweetalert2",
+            "Express.js",
+            "MongoDB",
+            "JWT",
+            "Cookie-Parser",
+            "CORS",
+            "dotenv",
+        ],
+        githubFrontend: "https://github.com/sajjadislam523/traceback-client",
+        githubBackend: "https://github.com/sajjadislam523/traceback-server",
     },
     {
-        company: "Innovative Co",
-        year: "2021",
-        title: "Light Saas Landing Page",
-        results: [
-            { title: "Boosted sales by 20%" },
-            { title: "Expanded customer reach by 35%" },
-            { title: "Increased brand awareness by 15%" },
+        id: 3,
+        image: crowdCube,
+        title: "CrowdCube",
+        description:
+            "A web application designed to connect individuals who want to raise money for personal needs, creative ideas, or startups with potential contributors. It enables users to create and manage fundraising campaigns, make donations, and track project progress.",
+        liveURL: "https://crowdcube-1f1e0.web.app/",
+        features: [
+            { title: "Secure sign-up, login, and profile management" },
+            { title: "Create, view, update, and delete fundraising campaigns" },
+            { title: "Contribute to campaigns and view donation history" },
         ],
-        link: "https://youtu.be/7hi5zwO75yc",
-        image: lightSaasLandingPage,
-    },
-    {
-        company: "Quantum Dynamics",
-        year: "2023",
-        title: "AI Startup Landing Page",
-        results: [
-            { title: "Enhanced user experience by 40%" },
-            { title: "Improved site speed by 50%" },
-            { title: "Increased mobile traffic by 35%" },
+        technologies: [
+            "React.js",
+            "Tailwind CSS",
+            "DaisyUI",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Firebase",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "dotenv",
+            "CORS",
         ],
-        link: "https://youtu.be/Z7I5uSRHMHg",
-        image: aiStartupLandingPage,
+        githubFrontend: "https://github.com/sajjadislam523/crowdcube-client",
+        githubBackend: "https://github.com/sajjadislam523/crowdcube-server",
     },
 ];
 
@@ -67,18 +130,18 @@ export const ProjectsSection = () => {
                         >
                             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                                 <div className="lg:pb-16">
-                                    <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm gap-2 text-transparent bg-clip-text">
+                                    {/* <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm gap-2 text-transparent bg-clip-text">
                                         <span>{project.company}</span>
                                         <span>&bull;</span>
                                         <span>{project.year}</span>
-                                    </div>
+                                    </div> */}
 
                                     <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
                                         {project.title}
                                     </h3>
                                     <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                                     <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                                        {project.results.map((result, idx) => (
+                                        {project.features.map((result, idx) => (
                                             <li
                                                 key={idx}
                                                 className="flex items-center gap-2 text-sm md:text-base text-white/50"
@@ -88,7 +151,7 @@ export const ProjectsSection = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <a href={project.link}>
+                                    <a href={project.liveURL} target="_blank">
                                         <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                                             <span>Visit Live Site</span>
                                             <ArrowUpRightIcon className="size-4" />
