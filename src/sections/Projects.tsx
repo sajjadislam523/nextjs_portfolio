@@ -157,6 +157,21 @@ export const ProjectsSection = () => {
                                             <ArrowUpRightIcon className="size-4" />
                                         </button>
                                     </a>
+                                    <div className="flex items-center gap-2 mt-2">
+                                        <a
+                                            href={project.githubFrontend}
+                                            className="uppercase text-center font-semibold text-sm tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text"
+                                        >
+                                            Frontend
+                                        </a>
+                                        |
+                                        <a
+                                            href={project.githubBackend}
+                                            className="uppercase text-center font-semibold text-sm tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text"
+                                        >
+                                            Backend
+                                        </a>
+                                    </div>
                                 </div>
                                 <div className="relative">
                                     <Image
