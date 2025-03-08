@@ -1,10 +1,14 @@
 "use client";
-import ChromeIcon from "@/assets/icons/chrome.svg";
 import CssIcon from "@/assets/icons/css3.svg";
+import FirebaseIcon from "@/assets/icons/firebase.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import HTMLIcons from "@/assets/icons/html5.svg";
+import MongdbIcon from "@/assets/icons/mongodb.svg";
+import NodejsIcon from "@/assets/icons/nodejs.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
+import VercelIcon from "@/assets/icons/vercel.svg";
 import BookImage from "@/assets/images/book-cover.png";
 import MapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -38,8 +42,24 @@ const toolboxItems = [
         iconType: GithubIcon,
     },
     {
-        title: "Chrome",
-        iconType: ChromeIcon,
+        title: "Firebase",
+        iconType: FirebaseIcon,
+    },
+    {
+        title: "Tailwind",
+        iconType: TailwindIcon,
+    },
+    {
+        title: "Nodejs",
+        iconType: NodejsIcon,
+    },
+    {
+        title: "MongoDB",
+        iconType: MongdbIcon,
+    },
+    {
+        title: "Vercel",
+        iconType: VercelIcon,
     },
 ];
 
