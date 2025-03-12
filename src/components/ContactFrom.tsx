@@ -1,5 +1,6 @@
 "use client";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
@@ -11,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import { z } from "zod";
 
 const contactFormSchema = z.object({
@@ -42,8 +44,10 @@ const ContactForm = () => {
 
             const result = await response.json();
             console.log("Form submitted", result);
+            toast.success("Message sent successfully!");
         } catch (error) {
             console.log("Submission error", error);
+            toast.error("Failed to sen message. Please try again.");
         }
     };
 
@@ -114,13 +118,13 @@ const ContactForm = () => {
                 />
 
                 {/* Submit Button */}
-                <button
+                <Button
                     type="submit"
                     className="w-full bg-gray-900 text-white inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 border border-gray-900 transition hover:bg-gray-800"
                 >
                     <span className="font-semibold">Contact Me</span>
                     <ArrowUpRightIcon className="w-4 h-4" />
-                </button>
+                </Button>
             </form>
         </Form>
     );

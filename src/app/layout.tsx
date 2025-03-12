@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Calistoga, Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
 
@@ -30,6 +32,16 @@ export default function RootLayout({
                 )}
             >
                 {children}
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </body>
         </html>
     );
