@@ -1,14 +1,17 @@
 import StarIcon from "@/assets/icons/star.svg";
+import { type FC } from "react";
 import { twMerge } from "tailwind-merge";
 
-export const CardHeader = ({
-    title,
-    description,
-    className,
-}: {
+interface CardHeaderProps {
     title: string;
     description: string;
     className?: string;
+}
+
+export const CardHeader: FC<CardHeaderProps> = ({
+    title,
+    description,
+    className,
 }) => {
     return (
         <div
