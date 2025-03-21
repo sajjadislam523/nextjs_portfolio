@@ -1,4 +1,4 @@
-import StarIcon from "@/assets/icons/star.svg";
+import { ReactComponent as StarIcon } from "@/assets/icons/star.svg";
 import { type FC } from "react";
 import { twMerge } from "tailwind-merge";
 

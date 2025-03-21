@@ -1,4 +1,4 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { ReactComponent as ArrowUpRightIcon } from "@/assets/icons/arrow-up-right.svg";
 import Link from "next/link";
 
 const footerLinks = [

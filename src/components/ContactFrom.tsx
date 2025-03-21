@@ -1,5 +1,5 @@
 "use client";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { ReactComponent as ArrowUpRightIcon } from "@/assets/icons/arrow-up-right.svg";
 import { Button } from "@/components/ui/button";
 import {
     Form,
